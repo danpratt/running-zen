@@ -1,0 +1,337 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		651438321F11BC6C00A837D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651438311F11BC6C00A837D4 /* AppDelegate.swift */; };
+		651438411F11BCBA00A837D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 651438401F11BCBA00A837D4 /* Assets.xcassets */; };
+		654B5A441F11CB0200EC5968 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 654B5A431F11CB0200EC5968 /* Main.storyboard */; };
+		65D4B5AF1F11CC0F002BABE1 /* germany.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 65D4B5AE1F11CC0F002BABE1 /* germany.jpg */; };
+		65D4B5B41F11CCD9002BABE1 /* germany.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 65D4B5B31F11CCD9002BABE1 /* germany.mp4 */; };
+		65D4B5BA1F11CD26002BABE1 /* RunCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D4B5B71F11CD26002BABE1 /* RunCollectionViewController.swift */; };
+		65D4B5BB1F11CD26002BABE1 /* RunningDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D4B5B81F11CD26002BABE1 /* RunningDestination.swift */; };
+		65D4B5BC1F11CD26002BABE1 /* RunPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D4B5B91F11CD26002BABE1 /* RunPlayerViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6514382E1F11BC6C00A837D4 /* Running Zen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Running Zen.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		651438311F11BC6C00A837D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6514383A1F11BC6C00A837D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		651438401F11BCBA00A837D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		654B5A431F11CB0200EC5968 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		65D4B5AE1F11CC0F002BABE1 /* germany.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = germany.jpg; sourceTree = "<group>"; };
+		65D4B5B31F11CCD9002BABE1 /* germany.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = germany.mp4; sourceTree = "<group>"; };
+		65D4B5B71F11CD26002BABE1 /* RunCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunCollectionViewController.swift; sourceTree = "<group>"; };
+		65D4B5B81F11CD26002BABE1 /* RunningDestination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunningDestination.swift; sourceTree = "<group>"; };
+		65D4B5B91F11CD26002BABE1 /* RunPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunPlayerViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6514382B1F11BC6C00A837D4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		651438251F11BC6C00A837D4 = {
+			isa = PBXGroup;
+			children = (
+				65D4B5BD1F11CD36002BABE1 /* Temp Assets */,
+				651438301F11BC6C00A837D4 /* Running Zen */,
+				6514382F1F11BC6C00A837D4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6514382F1F11BC6C00A837D4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6514382E1F11BC6C00A837D4 /* Running Zen.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		651438301F11BC6C00A837D4 /* Running Zen */ = {
+			isa = PBXGroup;
+			children = (
+				65D4B5C01F11CD51002BABE1 /* Supporting Files */,
+				65D4B5BE1F11CD3E002BABE1 /* View Controllers */,
+				65D4B5BF1F11CD45002BABE1 /* View */,
+			);
+			path = "Running Zen";
+			sourceTree = "<group>";
+		};
+		65D4B5BD1F11CD36002BABE1 /* Temp Assets */ = {
+			isa = PBXGroup;
+			children = (
+				65D4B5AE1F11CC0F002BABE1 /* germany.jpg */,
+				65D4B5B31F11CCD9002BABE1 /* germany.mp4 */,
+			);
+			name = "Temp Assets";
+			sourceTree = "<group>";
+		};
+		65D4B5BE1F11CD3E002BABE1 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				65D4B5B71F11CD26002BABE1 /* RunCollectionViewController.swift */,
+				65D4B5B81F11CD26002BABE1 /* RunningDestination.swift */,
+				65D4B5B91F11CD26002BABE1 /* RunPlayerViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		65D4B5BF1F11CD45002BABE1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				651438401F11BCBA00A837D4 /* Assets.xcassets */,
+				654B5A431F11CB0200EC5968 /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		65D4B5C01F11CD51002BABE1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				651438311F11BC6C00A837D4 /* AppDelegate.swift */,
+				6514383A1F11BC6C00A837D4 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6514382D1F11BC6C00A837D4 /* Running Zen */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6514383D1F11BC6C00A837D4 /* Build configuration list for PBXNativeTarget "Running Zen" */;
+			buildPhases = (
+				6514382A1F11BC6C00A837D4 /* Sources */,
+				6514382B1F11BC6C00A837D4 /* Frameworks */,
+				6514382C1F11BC6C00A837D4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Running Zen";
+			productName = "Running Zen";
+			productReference = 6514382E1F11BC6C00A837D4 /* Running Zen.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		651438261F11BC6C00A837D4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Daniel Pratt";
+				TargetAttributes = {
+					6514382D1F11BC6C00A837D4 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = ZJ769HHQS2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 651438291F11BC6C00A837D4 /* Build configuration list for PBXProject "Running Zen" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 651438251F11BC6C00A837D4;
+			productRefGroup = 6514382F1F11BC6C00A837D4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6514382D1F11BC6C00A837D4 /* Running Zen */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6514382C1F11BC6C00A837D4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65D4B5AF1F11CC0F002BABE1 /* germany.jpg in Resources */,
+				65D4B5B41F11CCD9002BABE1 /* germany.mp4 in Resources */,
+				651438411F11BCBA00A837D4 /* Assets.xcassets in Resources */,
+				654B5A441F11CB0200EC5968 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6514382A1F11BC6C00A837D4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65D4B5BA1F11CD26002BABE1 /* RunCollectionViewController.swift in Sources */,
+				65D4B5BC1F11CD26002BABE1 /* RunPlayerViewController.swift in Sources */,
+				651438321F11BC6C00A837D4 /* AppDelegate.swift in Sources */,
+				65D4B5BB1F11CD26002BABE1 /* RunningDestination.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		6514383B1F11BC6C00A837D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = appletvos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 10.2;
+			};
+			name = Debug;
+		};
+		6514383C1F11BC6C00A837D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = appletvos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 10.2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6514383E1F11BC6C00A837D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = ZJ769HHQS2;
+				INFOPLIST_FILE = "Running Zen/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.blaumagier.Running-Zen";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		6514383F1F11BC6C00A837D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = ZJ769HHQS2;
+				INFOPLIST_FILE = "Running Zen/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.blaumagier.Running-Zen";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		651438291F11BC6C00A837D4 /* Build configuration list for PBXProject "Running Zen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6514383B1F11BC6C00A837D4 /* Debug */,
+				6514383C1F11BC6C00A837D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6514383D1F11BC6C00A837D4 /* Build configuration list for PBXNativeTarget "Running Zen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6514383E1F11BC6C00A837D4 /* Debug */,
+				6514383F1F11BC6C00A837D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 651438261F11BC6C00A837D4 /* Project object */;
+}
