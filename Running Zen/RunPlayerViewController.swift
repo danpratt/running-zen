@@ -20,7 +20,9 @@ class RunPlayerViewController: AVPlayerViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        player = AVPlayer(url: runFile)
+        // player = AVPlayer(url: runFile)
+        let url = URL(string: "https://dl.dropboxusercontent.com/s/k59q7mhasu2zac6/Simply%20Zen%20Movie.mp4")
+        player = AVPlayer(url: url!)
         player?.play()
     }
 
