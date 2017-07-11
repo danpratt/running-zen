@@ -12,7 +12,7 @@ import AVFoundation
 
 class RunCollectionViewController: UICollectionViewController, AVPlayerViewControllerDelegate {
     
-    let runningLabels: [String] = ["germany"]
+    let runningLabels: [String] = ["Germany"]
     let runningImages: [String] = ["germany.jpg"]
     let runningVideos: [String] = ["germany"]
 
