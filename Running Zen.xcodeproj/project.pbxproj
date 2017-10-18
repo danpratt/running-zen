@@ -7,16 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		650C70B61F97EC1100048F4C /* RZMainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650C70B51F97EC1100048F4C /* RZMainMenuViewController.swift */; };
 		651438321F11BC6C00A837D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651438311F11BC6C00A837D4 /* AppDelegate.swift */; };
 		651438411F11BCBA00A837D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 651438401F11BCBA00A837D4 /* Assets.xcassets */; };
 		654B5A441F11CB0200EC5968 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 654B5A431F11CB0200EC5968 /* Main.storyboard */; };
 		65D4B5AF1F11CC0F002BABE1 /* germany.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 65D4B5AE1F11CC0F002BABE1 /* germany.jpg */; };
-		65D4B5BA1F11CD26002BABE1 /* RunCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D4B5B71F11CD26002BABE1 /* RunCollectionViewController.swift */; };
 		65D4B5BB1F11CD26002BABE1 /* RunningDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D4B5B81F11CD26002BABE1 /* RunningDestination.swift */; };
 		65D4B5BC1F11CD26002BABE1 /* RunPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D4B5B91F11CD26002BABE1 /* RunPlayerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		650C70B51F97EC1100048F4C /* RZMainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RZMainMenuViewController.swift; sourceTree = "<group>"; };
 		6514382E1F11BC6C00A837D4 /* Running Zen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Running Zen.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		651438311F11BC6C00A837D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6514383A1F11BC6C00A837D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -24,7 +25,6 @@
 		654B5A431F11CB0200EC5968 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		65D4B5AE1F11CC0F002BABE1 /* germany.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = germany.jpg; sourceTree = "<group>"; };
 		65D4B5B31F11CCD9002BABE1 /* germany.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = germany.mp4; sourceTree = "<group>"; };
-		65D4B5B71F11CD26002BABE1 /* RunCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunCollectionViewController.swift; sourceTree = "<group>"; };
 		65D4B5B81F11CD26002BABE1 /* RunningDestination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunningDestination.swift; sourceTree = "<group>"; };
 		65D4B5B91F11CD26002BABE1 /* RunPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunPlayerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -79,11 +79,11 @@
 		65D4B5BE1F11CD3E002BABE1 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				65D4B5B71F11CD26002BABE1 /* RunCollectionViewController.swift */,
 				65D4B5B81F11CD26002BABE1 /* RunningDestination.swift */,
 				65D4B5B91F11CD26002BABE1 /* RunPlayerViewController.swift */,
+				650C70B51F97EC1100048F4C /* RZMainMenuViewController.swift */,
 			);
-			name = "View Controllers";
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 		65D4B5BF1F11CD45002BABE1 /* View */ = {
@@ -92,7 +92,7 @@
 				651438401F11BCBA00A837D4 /* Assets.xcassets */,
 				654B5A431F11CB0200EC5968 /* Main.storyboard */,
 			);
-			name = View;
+			path = View;
 			sourceTree = "<group>";
 		};
 		65D4B5C01F11CD51002BABE1 /* Supporting Files */ = {
@@ -178,7 +178,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65D4B5BA1F11CD26002BABE1 /* RunCollectionViewController.swift in Sources */,
+				650C70B61F97EC1100048F4C /* RZMainMenuViewController.swift in Sources */,
 				65D4B5BC1F11CD26002BABE1 /* RunPlayerViewController.swift in Sources */,
 				651438321F11BC6C00A837D4 /* AppDelegate.swift in Sources */,
 				65D4B5BB1F11CD26002BABE1 /* RunningDestination.swift in Sources */,
@@ -303,7 +303,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.blaumagier.Running-Zen";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -318,7 +318,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.blaumagier.Running-Zen";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
