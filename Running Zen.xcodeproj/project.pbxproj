@@ -11,6 +11,7 @@
 		651438321F11BC6C00A837D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651438311F11BC6C00A837D4 /* AppDelegate.swift */; };
 		651438411F11BCBA00A837D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 651438401F11BCBA00A837D4 /* Assets.xcassets */; };
 		654B5A441F11CB0200EC5968 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 654B5A431F11CB0200EC5968 /* Main.storyboard */; };
+		657732CC1F9AA7B000C3B55A /* RZVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657732CB1F9AA7AF00C3B55A /* RZVideo.swift */; };
 		65D4B5AF1F11CC0F002BABE1 /* germany.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 65D4B5AE1F11CC0F002BABE1 /* germany.jpg */; };
 		65D4B5BB1F11CD26002BABE1 /* RunningDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D4B5B81F11CD26002BABE1 /* RunningDestination.swift */; };
 		65D4B5BC1F11CD26002BABE1 /* RunPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D4B5B91F11CD26002BABE1 /* RunPlayerViewController.swift */; };
@@ -23,6 +24,7 @@
 		6514383A1F11BC6C00A837D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		651438401F11BCBA00A837D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		654B5A431F11CB0200EC5968 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		657732CB1F9AA7AF00C3B55A /* RZVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RZVideo.swift; sourceTree = "<group>"; };
 		65D4B5AE1F11CC0F002BABE1 /* germany.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = germany.jpg; sourceTree = "<group>"; };
 		65D4B5B31F11CCD9002BABE1 /* germany.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = germany.mp4; sourceTree = "<group>"; };
 		65D4B5B81F11CD26002BABE1 /* RunningDestination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunningDestination.swift; sourceTree = "<group>"; };
@@ -60,11 +62,20 @@
 		651438301F11BC6C00A837D4 /* Running Zen */ = {
 			isa = PBXGroup;
 			children = (
+				657732CA1F9AA76500C3B55A /* Model */,
 				65D4B5C01F11CD51002BABE1 /* Supporting Files */,
 				65D4B5BE1F11CD3E002BABE1 /* View Controllers */,
 				65D4B5BF1F11CD45002BABE1 /* View */,
 			);
 			path = "Running Zen";
+			sourceTree = "<group>";
+		};
+		657732CA1F9AA76500C3B55A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				657732CB1F9AA7AF00C3B55A /* RZVideo.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		65D4B5BD1F11CD36002BABE1 /* Temp Assets */ = {
@@ -181,6 +192,7 @@
 				650C70B61F97EC1100048F4C /* RZMainMenuViewController.swift in Sources */,
 				65D4B5BC1F11CD26002BABE1 /* RunPlayerViewController.swift in Sources */,
 				651438321F11BC6C00A837D4 /* AppDelegate.swift in Sources */,
+				657732CC1F9AA7B000C3B55A /* RZVideo.swift in Sources */,
 				65D4B5BB1F11CD26002BABE1 /* RunningDestination.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
