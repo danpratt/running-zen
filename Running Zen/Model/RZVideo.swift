@@ -8,11 +8,23 @@
 
 import Foundation
 
-protocol RZVideo {
+protocol RZVideoProtocol {
     var label: String { get }
     var image: String { get }
     var url: URL { get }
-    
     init(label: String, image: String, url: URL)
+}
+
+struct RZVideo: RZVideoProtocol {
+    let label: String
+    let image: String
+    let url: URL
+    
+    init(label: String, image: String, url: URL) {
+        self.label = label
+        self.image = image
+        self.url = url
+    }
+    
     
 }
