@@ -20,7 +20,15 @@ class RunPlayerViewController: AVPlayerViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-         player = AVPlayer(url: runFile)
+        
+        let asset = AVAsset(url: runFile)
+        let assetKeys = [
+            "playable",
+            "hasProtectedContent"
+        ]
+        let playerItem = AVPlayerItem(asset: asset, automaticallyLoadedAssetKeys: assetKeys)
+        NotificationCenter.default.addObserver(self, selector: #selector(playerDidFinishPlaying), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: playerItem)
+         player = AVPlayer(playerItem: playerItem)
 //        let url = URL(string: "https://dl.dropboxusercontent.com/s/k59q7mhasu2zac6/Simply%20Zen%20Movie.mp4")
 //        player = AVPlayer(url: url!)
         player?.play()
@@ -28,6 +36,18 @@ class RunPlayerViewController: AVPlayerViewController {
 
     override func viewWillDisappear(_ animated: Bool) {
         player?.pause()
+    }
+    
+    // MARK: - Player Controller Functions
+    @objc private func playerDidFinishPlaying() {
+        print("Finished Playing")
+        player?.pause()
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    // MARK: - Accelerometer Control
+    override func motionBegan(_ motion: UIEventSubtype, with event: UIEvent?) {
+        print ("Event detected: \(String(describing: event?.type))")
     }
     
 
