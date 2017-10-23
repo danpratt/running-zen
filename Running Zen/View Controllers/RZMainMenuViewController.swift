@@ -7,8 +7,14 @@
 //
 
 import UIKit
+import GameController
 
-class RZMainMenuViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class RZMainMenuViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, ReactToMotionEvents {
+    
+    func motionUpdate(motion: GCMotion) {
+//        print("x: \(motion.userAcceleration.x)   y: \(motion.userAcceleration.y)")
+        print("x gravity: \(motion.gravity.x)   y gravity: \(motion.gravity.y)  z gravity:\(motion.gravity.z)")
+    }
 
     let runningLabels: [String] = ["Germany", "Seattle"]
     let runningImages: [String] = ["germany.jpg", "germany.jpg"]
@@ -16,11 +22,19 @@ class RZMainMenuViewController: UIViewController, UICollectionViewDelegate, UICo
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.motionDelegate = self
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+        print("Memory warning during main menu")
     }
     
     // MARK: UICollectionViewDataSource

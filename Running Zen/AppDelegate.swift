@@ -7,16 +7,36 @@
 //
 
 import UIKit
+import GameController
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var motionDelegate: ReactToMotionEvents? = nil
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let center = NotificationCenter.default
+        center.addObserver(self, selector: #selector(setupControllers), name: NSNotification.Name.GCControllerDidConnect, object: nil)
+        center.addObserver(self, selector: #selector(setupControllers), name: NSNotification.Name.GCControllerDidDisconnect, object: nil)
+        GCController.startWirelessControllerDiscovery { () -> Void in
+            
+        }
         return true
+    }
+    
+    @objc func setupControllers(notif: NSNotification) {
+        print("controller connection")
+        let controllers = GCController.controllers()
+        for controller in controllers {
+            controller.motion?.valueChangedHandler = { (motion: GCMotion)->() in
+                if let delegate = self.motionDelegate {
+                    delegate.motionUpdate(motion: motion)
+                }
+            }
+        }
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
@@ -40,7 +60,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
 
 }
 
