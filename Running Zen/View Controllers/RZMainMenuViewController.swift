@@ -11,9 +11,24 @@ import GameController
 
 class RZMainMenuViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, ReactToMotionEvents {
     
+    enum MotionDirection: Int {
+        case up = 0, down = 1
+    }
+    
+    var lastMotionDirection: MotionDirection = .up
+    
+    var stepCount = 0
+    
     func motionUpdate(motion: GCMotion) {
 //        print("x: \(motion.userAcceleration.x)   y: \(motion.userAcceleration.y)")
-        print("x gravity: \(motion.gravity.x)   y gravity: \(motion.gravity.y)  z gravity:\(motion.gravity.z)")
+        let currentMotionDirection = motion.gravity.z > 0 ? MotionDirection.up : MotionDirection.down
+        
+        if lastMotionDirection != currentMotionDirection {
+            stepCount += 1
+            lastMotionDirection = currentMotionDirection
+            print("Step number: \(stepCount) was taken")
+        }
+        
     }
 
     let runningLabels: [String] = ["Germany", "Seattle"]
