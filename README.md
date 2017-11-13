@@ -15,14 +15,13 @@ I wanted a native Apple TV app for doing this, rather than having to push from a
 
 ## What Works
 
-* Not much
+* Able to remotely load video from url
+* Able to count steps
 
 ## TODO
 
-* Change videos to model
-* Get videos to pull from VIMEO or YouTube or Firebase
+* Finish basic implementation
 * Create and upload running videos
-* Figure out how to pull info from remote to adjust video speed
 
 
 ## Contributing
