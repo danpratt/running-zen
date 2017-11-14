@@ -43,7 +43,7 @@ class RZCaptureMotionEvents: ReactToMotionEvents {
     // This sets up a timer used for playing bell audio
     private func setupTimer() {
         timer = Timer.scheduledTimer(withTimeInterval: timerInterval, repeats: true, block: { (timer) in
-            print("There were \(self.stepCount) steps taken in time interval")
+//            print("There were \(self.stepCount) steps taken in time interval")
             self.updateSpeed?.updateMotionSpeed(sender: self)
             self.stepCount = 0
         })

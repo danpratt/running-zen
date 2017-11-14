@@ -16,6 +16,9 @@ class RunPlayerViewController: AVPlayerViewController, RZUpdateMotionSpeed {
     
     // setup motion control delegate
     var runDelegate: RZCaptureMotionEvents? = RZCaptureMotionEvents()
+    
+    // keep track of old speed
+    var lastStepCount = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,13 +58,54 @@ class RunPlayerViewController: AVPlayerViewController, RZUpdateMotionSpeed {
     @objc private func playerDidFinishPlaying() {
         print("Finished Playing")
         player?.pause()
+        // make sure resources are de-allocated
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.motionDelegate = nil
+        runDelegate = nil
         self.dismiss(animated: true, completion: nil)
     }
     
     // MARK: - Update Motion Speed Delegate Method
     // Update motion speed test
     func updateMotionSpeed(sender: RZCaptureMotionEvents) {
-        print("Getting data: Steps counted were \(sender.stepCount)")
+        let steps = sender.stepCount
+//        print("Getting data: Steps counted were \(steps)")
+        if steps != lastStepCount {
+            updatePlayerSpeed(withSteps: steps)
+        }
+    }
+    
+    // MARK: - Update Player Speed
+    func updatePlayerSpeed(withSteps steps: Int) {
+        var speed: Float = 0.0
+        switch steps {
+        case 0:
+            print("0 steps case")
+            speed = 0.0
+        case 1...10:
+            print("normal walk case")
+            speed = Float(steps) * 0.07
+            player?.rate = speed
+        case 11...17:
+            print("walking fast")
+            speed = Float(steps) * 0.06
+        case 18...22:
+            print("Starting to run")
+            speed = Float(steps) * 0.05
+        case 23...28:
+            print("Running quickly")
+            speed = Float(steps) * 0.048
+        case 28...70:
+            print("Really fast run, holy crap!")
+            // Should not be humanly possible to get up much past 40
+            speed = Float(steps) * 0.047
+        default:
+            speed = 0.0
+        }
+        // update the player speed
+        player?.rate = speed
+        // update this steps count to last steps count
+        lastStepCount = steps
     }
 
 }
