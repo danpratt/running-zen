@@ -7,9 +7,17 @@
 //
 
 import UIKit
-import GameController
 
-class RZMainMenuViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class RZMainMenuViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, RZUpdateMotionSpeed {
+    
+    // Update motion speed test
+    func updateMotionSpeed(sender: RZCaptureMotionEvents) {
+        print("Getting data: Steps counted were \(sender.stepCount)")
+    }
+    
+    
+    // setup motion control delegate
+    let runDelegate = RZCaptureMotionEvents()
 
     let runningLabels: [String] = ["Germany", "Seattle"]
     let runningImages: [String] = ["germany.jpg", "germany.jpg"]
@@ -23,7 +31,14 @@ class RZMainMenuViewController: UIViewController, UICollectionViewDelegate, UICo
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        appDelegate.motionDelegate = RZCaptureMotionEvents()
+        appDelegate.motionDelegate = runDelegate
+        runDelegate.updateSpeed = self
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.motionDelegate = nil
     }
     
     override func didReceiveMemoryWarning() {
