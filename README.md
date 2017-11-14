@@ -7,7 +7,7 @@ A running app for TvOS
 
 ## Description
 
-Running Zen is an ap for your TV that allows you to watch running videos while you exercise on your treadmill.
+Running Zen is an ap for your TV that allows you to watch running videos while you exercise on your treadmill.  All you have to do is put your Apple TV Siri Remote in your pocket and start running!
 
 ## Purpose
 
@@ -16,12 +16,12 @@ I wanted a native Apple TV app for doing this, rather than having to push from a
 ## What Works
 
 * Able to remotely load video from url
-* Able to count steps
+* Running speed will change video playback speed
 
 ## TODO
 
-* Finish basic implementation
 * Create and upload running videos
+* Create intro tutorial or tutorial video
 
 
 ## Contributing
