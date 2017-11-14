@@ -9,27 +9,7 @@
 import UIKit
 import GameController
 
-class RZMainMenuViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, ReactToMotionEvents {
-    
-    enum MotionDirection: Int {
-        case up = 0, down = 1
-    }
-    
-    var lastMotionDirection: MotionDirection = .up
-    
-    var stepCount = 0
-    
-    func motionUpdate(motion: GCMotion) {
-//        print("x: \(motion.userAcceleration.x)   y: \(motion.userAcceleration.y)")
-        let currentMotionDirection = motion.gravity.z > 0 ? MotionDirection.up : MotionDirection.down
-        
-        if lastMotionDirection != currentMotionDirection {
-            stepCount += 1
-            lastMotionDirection = currentMotionDirection
-            print("Step number: \(stepCount) was taken")
-        }
-        
-    }
+class RZMainMenuViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
     let runningLabels: [String] = ["Germany", "Seattle"]
     let runningImages: [String] = ["germany.jpg", "germany.jpg"]
@@ -43,7 +23,7 @@ class RZMainMenuViewController: UIViewController, UICollectionViewDelegate, UICo
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        appDelegate.motionDelegate = self
+        appDelegate.motionDelegate = RZCaptureMotionEvents()
     }
     
     override func didReceiveMemoryWarning() {
@@ -77,8 +57,8 @@ class RZMainMenuViewController: UIViewController, UICollectionViewDelegate, UICo
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("Cell \((indexPath as NSIndexPath).row) selected")
-        /*let fileURL = URL(fileURLWithPath: runningVideos[(indexPath as NSIndexPath).row])*/
-//        let fileURL = Bundle.main.url(forResource: runningVideos[indexPath.row], withExtension: "mp4")
+        
+        // load up correct video file
         let fileURL = runningVideos[indexPath.row]
         print(String(describing: fileURL))
         
@@ -88,49 +68,6 @@ class RZMainMenuViewController: UIViewController, UICollectionViewDelegate, UICo
         
         present(runPlayer, animated: true, completion: nil)
         
-        /* runPlayer = AVPlayer(url: fileURL!)
-         
-         runPlayerViewControler.showsPlaybackControls = false
-         runPlayerViewControler.player = runPlayer
-         
-         self.present(runPlayerViewControler, animated: true) { () -> Void in
-         self.runPlayerViewControler.player?.play()
-         } */
-        
     }
     
-    
-    
-    // MARK: UICollectionViewDelegate
-    
-    /*
-     // Uncomment this method to specify if the specified item should be highlighted during tracking
-     override func collectionView(collectionView: UICollectionView, shouldHighlightItemAtIndexPath indexPath: NSIndexPath) -> Bool {
-     return true
-     }
-     */
-    
-    /*
-     // Uncomment this method to specify if the specified item should be selected
-     override func collectionView(collectionView: UICollectionView, shouldSelectItemAtIndexPath indexPath: NSIndexPath) -> Bool {
-     return true
-     }
-     */
-    
-    /*
-     // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-     override func collectionView(collectionView: UICollectionView, shouldShowMenuForItemAtIndexPath indexPath: NSIndexPath) -> Bool {
-     return false
-     }
-     
-     override func collectionView(collectionView: UICollectionView, canPerformAction action: Selector, forItemAtIndexPath indexPath: NSIndexPath, withSender sender: AnyObject?) -> Bool {
-     return false
-     }
-     
-     override func collectionView(collectionView: UICollectionView, performAction action: Selector, forItemAtIndexPath indexPath: NSIndexPath, withSender sender: AnyObject?) {
-     
-     }
-     */
-    
-    // MARK: AVPlayerViewControllerDelegate
 }
