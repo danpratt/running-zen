@@ -12,7 +12,7 @@ class RZMainMenuViewController: UIViewController, UICollectionViewDelegate, UICo
 
     let runningLabels: [String] = ["Germany", "Seattle"]
     let runningImages: [String] = ["germany.jpg", "germany.jpg"]
-    let runningVideos: [URL] = [URL(string: "https://dl.dropboxusercontent.com/s/k59q7mhasu2zac6/Simply%20Zen%20Movie.mp4")!, URL(string: "https://dl.dropboxusercontent.com/s/k59q7mhasu2zac6/Simply%20Zen%20Movie.mp4")!]
+    let runningVideos: [URL] = [URL(string: "https://dl.dropboxusercontent.com/s/k59q7mhasu2zac6/Simply%20Zen%20Movie.mp4")!, URL(string: "https://dl.dropboxusercontent.com/s/o9ki1x72zxzpx3i/Walk_in_Forest.mp4")!]
     
     override func viewDidLoad() {
         super.viewDidLoad()
