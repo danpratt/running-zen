@@ -24,7 +24,7 @@ extension RZVideo {
     static func testVideos() -> [RZVideo] {
         return [
             RZVideo(label: "Germany", image: "germany.jpg", url: URL(string: "https://dl.dropboxusercontent.com/s/k59q7mhasu2zac6/Simply%20Zen%20Movie.mp4")!),
-            RZVideo(label: "Seattle", image: "germany.jpg", url: URL(string: "https://dl.dropboxusercontent.com/s/o9ki1x72zxzpx3i/Walk_in_Forest.mp4")!)
+            RZVideo(label: "Seattle", image: "seattle.jpg", url: URL(string: "https://dl.dropboxusercontent.com/s/o9ki1x72zxzpx3i/Walk_in_Forest.mp4")!)
         ]
     }
 }

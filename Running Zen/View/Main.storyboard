@@ -88,7 +88,9 @@
         <!--Run-->
         <scene sceneID="wOn-uM-fMg">
             <objects>
-                <avPlayerViewController storyboardIdentifier="runPlayer" title="Run" showsPlaybackControls="NO" videoGravity="AVLayerVideoGravityResizeAspect" id="TLt-dG-Nz1" customClass="RunPlayerViewController" customModule="Running_Zen" customModuleProvider="target" sceneMemberID="viewController"/>
+                <avPlayerViewController storyboardIdentifier="runPlayer" title="Run" showsPlaybackControls="NO" videoGravity="AVLayerVideoGravityResizeAspect" id="TLt-dG-Nz1" customClass="RunPlayerViewController" customModule="Running_Zen" customModuleProvider="target" sceneMemberID="viewController">
+                    <value key="contentSizeForViewInPopover" type="size" width="1920" height="1080"/>
+                </avPlayerViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NHy-0k-rbx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2825" y="2068"/>

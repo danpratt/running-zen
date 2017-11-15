@@ -19,6 +19,9 @@ class RunPlayerViewController: AVPlayerViewController, RZUpdateMotionSpeed {
     
     // keep track of old speed
     var lastStepCount = 0
+    
+    // activity indicator
+    let indicator = RZActivityIndicator()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,17 +35,24 @@ class RunPlayerViewController: AVPlayerViewController, RZUpdateMotionSpeed {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.motionDelegate = runDelegate
         runDelegate?.updateSpeed = self
-        
         let asset = AVAsset(url: runFile)
         let assetKeys = [
             "playable",
             "hasProtectedContent"
         ]
+        
+        // start activity indicator
+        indicator.beginLoadingActivity(viewController: self, color: .white)
+        
+        // load up a player item
         let playerItem = AVPlayerItem(asset: asset, automaticallyLoadedAssetKeys: assetKeys)
+        
+        // add notifications for when player starts to play, and when it finishes playing
+        playerItem.addObserver(self, forKeyPath: "status", options: NSKeyValueObservingOptions.new, context: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(playerDidFinishPlaying), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: playerItem)
-         player = AVPlayer(playerItem: playerItem)
-//        let url = URL(string: "https://dl.dropboxusercontent.com/s/k59q7mhasu2zac6/Simply%20Zen%20Movie.mp4")
-//        player = AVPlayer(url: url!)
+        
+        // setup player and start playback
+        player = AVPlayer(playerItem: playerItem)
         player?.play()
     }
 
@@ -55,8 +65,10 @@ class RunPlayerViewController: AVPlayerViewController, RZUpdateMotionSpeed {
     }
     
     // MARK: - Player Controller Functions
+    
+    // make sure player is paused, delegates are deallocated and view is dismissed when video finishes
     @objc private func playerDidFinishPlaying() {
-        print("Finished Playing")
+
         player?.pause()
         // make sure resources are de-allocated
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -65,11 +77,18 @@ class RunPlayerViewController: AVPlayerViewController, RZUpdateMotionSpeed {
         self.dismiss(animated: true, completion: nil)
     }
     
+    // Remove activity indicator when video starts to play
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if keyPath == "status" && player?.status == AVPlayerStatus.readyToPlay {
+            indicator.endLoadingActivity(viewController: self)
+        }
+    }
+    
     // MARK: - Update Motion Speed Delegate Method
+    
     // Update motion speed test
     func updateMotionSpeed(sender: RZCaptureMotionEvents) {
         let steps = sender.stepCount
-//        print("Getting data: Steps counted were \(steps)")
         if steps != lastStepCount {
             updatePlayerSpeed(withSteps: steps)
         }

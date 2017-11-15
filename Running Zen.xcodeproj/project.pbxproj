@@ -16,6 +16,8 @@
 		657732D11F9BBDE700C3B55A /* ReactToMotionEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657732D01F9BBDE700C3B55A /* ReactToMotionEvents.swift */; };
 		658D44BA1FBB79CC0095303C /* RZCaptureMotionEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658D44B91FBB79CC0095303C /* RZCaptureMotionEvents.swift */; };
 		658D44BC1FBB845C0095303C /* RZUpdateMotionSpeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658D44BB1FBB845C0095303C /* RZUpdateMotionSpeed.swift */; };
+		65BC6A4D1FBCBBDE00C7530E /* seattle.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 65BC6A4C1FBCBBDE00C7530E /* seattle.jpg */; };
+		65BC6A4F1FBCC7FF00C7530E /* RZActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BC6A4E1FBCC7FF00C7530E /* RZActivityIndicator.swift */; };
 		65D4B5AF1F11CC0F002BABE1 /* germany.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 65D4B5AE1F11CC0F002BABE1 /* germany.jpg */; };
 		65D4B5BB1F11CD26002BABE1 /* RunningDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D4B5B81F11CD26002BABE1 /* RunningDestination.swift */; };
 		65D4B5BC1F11CD26002BABE1 /* RunPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D4B5B91F11CD26002BABE1 /* RunPlayerViewController.swift */; };
@@ -33,8 +35,9 @@
 		657732D01F9BBDE700C3B55A /* ReactToMotionEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactToMotionEvents.swift; sourceTree = "<group>"; };
 		658D44B91FBB79CC0095303C /* RZCaptureMotionEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RZCaptureMotionEvents.swift; sourceTree = "<group>"; };
 		658D44BB1FBB845C0095303C /* RZUpdateMotionSpeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RZUpdateMotionSpeed.swift; sourceTree = "<group>"; };
+		65BC6A4C1FBCBBDE00C7530E /* seattle.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = seattle.jpg; sourceTree = "<group>"; };
+		65BC6A4E1FBCC7FF00C7530E /* RZActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RZActivityIndicator.swift; sourceTree = "<group>"; };
 		65D4B5AE1F11CC0F002BABE1 /* germany.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = germany.jpg; sourceTree = "<group>"; };
-		65D4B5B31F11CCD9002BABE1 /* germany.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = germany.mp4; sourceTree = "<group>"; };
 		65D4B5B81F11CD26002BABE1 /* RunningDestination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunningDestination.swift; sourceTree = "<group>"; };
 		65D4B5B91F11CD26002BABE1 /* RunPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunPlayerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -102,9 +105,10 @@
 			isa = PBXGroup;
 			children = (
 				65D4B5AE1F11CC0F002BABE1 /* germany.jpg */,
-				65D4B5B31F11CCD9002BABE1 /* germany.mp4 */,
+				65BC6A4C1FBCBBDE00C7530E /* seattle.jpg */,
 			);
 			name = "Temp Assets";
+			path = "Running Zen/Temp Assets";
 			sourceTree = "<group>";
 		};
 		65D4B5BE1F11CD3E002BABE1 /* View Controllers */ = {
@@ -113,6 +117,7 @@
 				65D4B5B81F11CD26002BABE1 /* RunningDestination.swift */,
 				65D4B5B91F11CD26002BABE1 /* RunPlayerViewController.swift */,
 				650C70B51F97EC1100048F4C /* RZMainMenuViewController.swift */,
+				65BC6A4E1FBCC7FF00C7530E /* RZActivityIndicator.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -196,6 +201,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65BC6A4D1FBCBBDE00C7530E /* seattle.jpg in Resources */,
 				65D4B5AF1F11CC0F002BABE1 /* germany.jpg in Resources */,
 				651438411F11BCBA00A837D4 /* Assets.xcassets in Resources */,
 				654B5A441F11CB0200EC5968 /* Main.storyboard in Resources */,
@@ -213,6 +219,7 @@
 				658D44BA1FBB79CC0095303C /* RZCaptureMotionEvents.swift in Sources */,
 				658D44BC1FBB845C0095303C /* RZUpdateMotionSpeed.swift in Sources */,
 				650C70B61F97EC1100048F4C /* RZMainMenuViewController.swift in Sources */,
+				65BC6A4F1FBCC7FF00C7530E /* RZActivityIndicator.swift in Sources */,
 				65D4B5BC1F11CD26002BABE1 /* RunPlayerViewController.swift in Sources */,
 				651438321F11BC6C00A837D4 /* AppDelegate.swift in Sources */,
 				657732CF1F9BBDAA00C3B55A /* RZVideoProtocol.swift in Sources */,
