@@ -14,9 +14,10 @@ class RZMainMenuViewController: UIViewController, UICollectionViewDelegate, UICo
     let runningImages: [String] = ["germany.jpg", "germany.jpg"]
     let runningVideos: [URL] = [URL(string: "https://dl.dropboxusercontent.com/s/k59q7mhasu2zac6/Simply%20Zen%20Movie.mp4")!, URL(string: "https://dl.dropboxusercontent.com/s/o9ki1x72zxzpx3i/Walk_in_Forest.mp4")!]
     
+    let testModel = RZVideo.testVideos()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -38,13 +39,16 @@ class RZMainMenuViewController: UIViewController, UICollectionViewDelegate, UICo
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return runningLabels.count
+        return testModel.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: RunningDestination = collectionView.dequeueReusableCell(withReuseIdentifier: "RunningItemCell", for: indexPath) as! RunningDestination
-        cell.locationLabel.text = runningLabels[(indexPath as NSIndexPath).row]
-        cell.runImage.image = UIImage(named: runningImages[(indexPath as NSIndexPath).row])
+        let runCellItem = testModel[indexPath.row]
+        cell.locationLabel.text = runCellItem.label
+        cell.runImage.image = UIImage(named: runCellItem.image)
+//        cell.locationLabel.text = runningLabels[(indexPath as NSIndexPath).row]
+//        cell.runImage.image = UIImage(named: runningImages[(indexPath as NSIndexPath).row])
         
         // Configure the cell
         
@@ -52,10 +56,9 @@ class RZMainMenuViewController: UIViewController, UICollectionViewDelegate, UICo
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("Cell \((indexPath as NSIndexPath).row) selected")
         
         // load up correct video file
-        let fileURL = runningVideos[indexPath.row]
+        let fileURL = testModel[indexPath.row].url
         print(String(describing: fileURL))
         
         // get ready for player storyboard
